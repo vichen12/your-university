@@ -1,0 +1,449 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+body{
+    background-color: #4D4D5C;
+}
+header{
+    height: 100px;
+    background-color: #4d4d5c;
+    padding: 0 50px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    text-transform: uppercase;
+    color: #6cc091;
+    font-weight:200;
+}
+.menu a{
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0 8px;
+   transition: 0.4s,
+}
+.mostrar-menu,.esconder-menu{
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    transition: 0.4s;
+}
+.mostrar-menu{
+    order: 1;
+  
+}
+.menu a:hover,
+.mostrar-menu:hover,
+.esconder-menu:hover{
+    color: #6cc091;
+}
+
+#check{
+    display:none;
+}
+
+/* Estilos de la barra lateral izquierda */
+  
+  
+.barra_lateral {
+    position: absolute;
+    left: -400px;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background-color: #4d4d5c;
+    z-index: 99;
+    padding-top: 70px;
+    padding-left: 50px;
+    transition: left 0.3s;
+}
+  
+.menu_items {
+    padding-top: 30px; /* Ajuste del espacio */
+}
+  
+.barra_lateral a {
+    color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 20px;
+    display:block;
+    font-size: 20px;
+}
+  
+.mostrar_rayitas,.esconder_rayitas {
+    font-size: 34px;
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    top: 26px;
+    left: 10px;
+    color: #ffffff;
+    z-index: 100; 
+}
+  
+.menu_items a:hover {
+    color: #6cc091; /* Cambiando el color del ícono cuando se pasa el ratón por encima */
+}
+  
+#rayitas {
+    display: none; 
+}
+  
+#rayitas:checked ~ .barra_lateral {
+    left: 0; /* Muestra la barra lateral cuando el checkbox está marcado */
+}
+
+  /*FOTO DE PROGRESO PAGINA*/
+#foto_fondo_progreso{
+    padding: 0px 0px;
+    background-image:url(../imagenes/foto_progreso.jpg);
+    height: 35vh;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+
+}
+#foto_fondo_progreso::before{
+    content: "";
+    background: rgba(40, 54, 44, 0.6);
+    position: absolute;
+    width: 100%;
+    height: 35vh;
+    left: 0;
+}
+  
+  /*COLOR Y TMÑO DE LETRAS TITULO PROGRESO PAGINA*/
+.foto_fondo_progreso{
+    position: relative;
+    color:#fff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+
+}
+.foto_fondo_progreso h3{
+    font-size: 40px;
+    font-weight: 4px;
+    padding: 10px 0px;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    
+}
+  /*COLOR LETRA PROGRESO PAGINA*/
+.foto_fondo_progreso p{
+    color: #6cc091;
+} 
+  /*COLOR DE LETRAS PROGRESO PAGINA*/
+  
+#barrita:hover{
+    color: #6cc091;
+    cursor: pointer;
+
+}
+
+#examenes_ultimos h4:hover{
+    color: #6cc091;
+    cursor: pointer;
+  
+}
+#correlativas h3:hover{
+    color: #6cc091;
+    cursor: pointer;
+  
+}
+#container_progreso h3:hover{
+    color: #6cc091;
+    cursor: pointer;
+}
+  
+
+
+/*BARRITA PROGRESO*/
+#barrita{
+    background-color: #ebebeb;
+    height: 100px;
+    border: 4px solid #548368;
+    border-radius: 40px;
+    margin-inline: 5px;
+    border: 3px solid rgb(44, 43, 43);
+    overflow: hidden;
+
+}
+.barrita_progreso{
+    text-align: center;
+    border-bottom: 3px solid #6cc091;
+    overflow: hidden;
+
+}
+
+
+
+
+/*PARTE DE VISTA DE PROGRESO*/
+#container_progreso{
+    display:flex;
+    border: 0px solid rgb(66, 62, 62);
+    border-radius: radius;
+    background-color: #4d4d5c;
+    height: 300px;
+}
+#materias_cursando{
+    flex:1;
+    border-bottom: 3px solid #6cc091;
+    border-radius: 10px;
+    margin: 20px 10px 10px 10px;
+    justify-content: center;
+    background-color: #fff;
+    text-align: center;
+    color:#5f5f5f;
+    border: 3px solid rgb(44, 43, 43);
+}
+#materias_cursando h3{
+    border-bottom: 3px solid #6cc091;
+
+}
+
+#materias_aprobadas{ 
+    flex:1;
+    border: 3px solid rgb(44, 43, 43);
+    border-radius: 10px;
+    margin: 20px 0px 10px 0px;
+    justify-content: center;
+    text-align: center;
+    background-color: #fff;
+    color:#5f5f5f ;
+}
+
+#materias_aprobadas h3{
+    border-bottom: 3px solid #6cc091;
+}
+
+#materias_pendientes{
+    flex:1;
+    border: 3px solid rgb(44, 43, 43);
+    border-radius: 10px;
+    margin: 20px 10px 10px 10px;
+    justify-content: center;
+    background-color: #fff;
+    text-align: center;
+    color:#5f5f5f;
+}
+#materias_pendientes h3{
+    border-bottom: 3px solid #6cc091;
+}
+  
+  
+
+/*CORRELATIVIDAD*/
+#correlativas{ 
+    display:flex;
+    border: 0px solid rgb(66, 62, 62);
+    border-radius: radius;
+    background-color: #4d4d5c;
+    height: 300px;
+
+}
+#materias_correlativas{
+    flex:1;
+    border-bottom: 3px solid #6cc091;
+    border-radius: 10px;
+    margin: 20px 40px 10px 10px;
+    justify-content: center;
+    background-color: #fff;
+    text-align: center;
+    color:#5f5f5f;
+    border: 3px solid rgb(44, 43, 43);
+    margin: 20px 10px 10px 10px;
+
+}
+#materias_correlativas h3{
+    border-bottom: 3px solid #6cc091;
+
+}
+
+
+/**/
+
+
+
+
+  /*ICONOS*/
+
+#iconos{
+
+    background-color: #787881; 
+}
+  .contenido-iconos{
+    padding: 50px 200px 0px 0px;
+    display:flex;
+    justify-content:space-between ;
+    text-align: center;
+}
+.contenido-iconos div{
+    flex: 1;
+    margin: 10px 10px 0px 10px;
+    border-right: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+#icono-share{
+    border: none;
+  
+}
+.contenido-iconos div i{
+    color: #72c294;
+}
+.contenido-iconos div h6{
+    color: #fff;
+    font-size: 15px;
+    font-weight: 100;
+    margin: 10px 0px;
+  
+}
+#derechos-reservados{
+  background-color: #5f5f5f;
+  justify-content: center;
+  text-align: center;
+  color: #e1e5e2;
+  position: relative;
+  box-sizing: border-box;
+  width: 350px;
+  height: 36px;
+  margin-top: 10px;
+  left: 0;
+  padding: 4px;
+
+}
+.logo-yu img{
+    position: relative;
+    width: 150px;
+    height: 130%;
+    margin-top: -60px;
+    margin-left: 0px;
+  
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/*resposive*/
+@media (max-width: 768px) {
+    /*HEADER*/
+    .mostrar-menu,
+    .esconder-menu {
+      display: block;
+    }
+  
+    * {
+      margin: 0%;
+    }
+  
+    .menu {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #4d4d5c;
+      right: -100%;
+      top: 0;
+      text-align: center;
+      padding: 100px 0px;
+      z-index: 100;
+      transition: 0.8s;
+    }
+  
+    .menu a {
+      display: block;
+      padding: 25px;
+    }
+  
+    .esconder-menu {
+      position: absolute;
+      top: 30px;
+      right: 40px;
+    }
+  
+    #check:checked~.menu {
+      right: 0;
+    }
+
+     /*PARTE DE VISTA DE PROMEDIOO*/
+     #container_progreso{
+        display:grid;
+        height: auto;
+
+    }
+    
+    #materias_cursando{
+        margin: 10px 10px 10px 10px;
+        height: 200px;
+    }
+
+
+    #materias_aprobadas{ 
+        margin: 10px 10px 10px 10px;
+        height: 200px;
+    }
+
+
+
+    #materias_pendientes{
+
+        margin: 10px 10px 10px 10px;
+        height: 200px;
+
+    }
+  
+  
+    /*ICONOS*/
+    #iconos{
+        margin-top:100px ;
+        padding: 0px 30px 0px 100px;
+        background-color: #787881;
+        justify-content: center;
+      
+    }
+    .contenido-iconos {
+      flex-direction: column;
+    }
+  
+    .contenido-iconos div {
+      border: none;
+    }
+  
+    #derechos-reservados {
+      width: auto;
+      height: auto;
+      left: -50px;
+      top: -10px;
+      padding: 0%;
+    }
+  
+    .logo-yu img:first-child {
+      margin-top: 0px;
+      margin-left: 0px;
+      order: 5;
+      flex-grow: 1; 
+    }
+  
+    .contenido-iconos {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+  
+    .logo-yu {
+      order: 6;
+    }
+  
+  
+}
